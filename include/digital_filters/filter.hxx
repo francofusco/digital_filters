@@ -71,10 +71,10 @@ void Filter<DataType,CoeffType>::initInput(
 )
 {
   // check sizes
-  if(input.size() != in_.size() || input.size() != in_.size()-1) {
+  if(input.size() != in_.size() && input.size() != in_.size()-1) {
     throw std::runtime_error(
       "Filter::initInput: 'input' has " + std::to_string(input.size()) +
-      "elements, but only " + std::to_string(in_.size()) + " or " +
+      " elements, but only " + std::to_string(in_.size()) + " or " +
       std::to_string(in_.size()-1) + " elements are allowed"
     );
   }
@@ -100,10 +100,10 @@ void Filter<DataType,CoeffType>::initOutput(
 )
 {
   // check sizes
-  if(output.size() != out_.size() || output.size() != out_.size()-1) {
+  if(output.size() != out_.size() && output.size() != out_.size()-1) {
     throw std::runtime_error(
       "Filter::initInput: 'output' has " + std::to_string(output.size()) +
-      "elements, but only " + std::to_string(out_.size()) + " or " +
+      " elements, but only " + std::to_string(out_.size()) + " or " +
       std::to_string(out_.size()-1) + " elements are allowed"
     );
   }
