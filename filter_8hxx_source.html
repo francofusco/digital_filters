@@ -166,10 +166,10 @@ $(document).ready(function(){initNavTree('filter_8hxx_source.html',''); initResi
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// check sizes</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span>(input.size() != in_.size() || input.size() != in_.size()-1) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span>(input.size() != in_.size() &amp;&amp; input.size() != in_.size()-1) {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="stringliteral">&quot;Filter::initInput: &#39;input&#39; has &quot;</span> + std::to_string(input.size()) +</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="stringliteral">&quot;elements, but only &quot;</span> + std::to_string(in_.size()) + <span class="stringliteral">&quot; or &quot;</span> +</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="stringliteral">&quot; elements, but only &quot;</span> + std::to_string(in_.size()) + <span class="stringliteral">&quot; or &quot;</span> +</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      std::to_string(in_.size()-1) + <span class="stringliteral">&quot; elements are allowed&quot;</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    );</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
@@ -195,10 +195,10 @@ $(document).ready(function(){initNavTree('filter_8hxx_source.html',''); initResi
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;)</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// check sizes</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">if</span>(output.size() != out_.size() || output.size() != out_.size()-1) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">if</span>(output.size() != out_.size() &amp;&amp; output.size() != out_.size()-1) {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="stringliteral">&quot;Filter::initInput: &#39;output&#39; has &quot;</span> + std::to_string(output.size()) +</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="stringliteral">&quot;elements, but only &quot;</span> + std::to_string(out_.size()) + <span class="stringliteral">&quot; or &quot;</span> +</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="stringliteral">&quot; elements, but only &quot;</span> + std::to_string(out_.size()) + <span class="stringliteral">&quot; or &quot;</span> +</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      std::to_string(out_.size()-1) + <span class="stringliteral">&quot; elements are allowed&quot;</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    );</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
