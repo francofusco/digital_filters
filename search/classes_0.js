@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['counter_20',['Counter',['../classfoo_1_1Counter.html',1,'foo']]]
+  ['filter_31',['Filter',['../classdigital__filters_1_1Filter.html',1,'digital_filters']]]
 ];

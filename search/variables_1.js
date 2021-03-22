@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['count_5f_37',['count_',['../classfoo_1_1Counter.html#afe06ece82bb5783e643ade8acf80e848',1,'foo::Counter']]]
+  ['b_5f_59',['b_',['../classdigital__filters_1_1Filter.html#a54191358d43d7b8ba22120ce08e9ac37',1,'digital_filters::Filter']]]
 ];

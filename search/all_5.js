@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['main_20page_12',['Main Page',['../index.html',1,'']]],
-  ['main_13',['main',['../foo__main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'foo_main.cpp']]],
-  ['main_5fpage_2emd_14',['main_page.md',['../main__page_8md.html',1,'']]],
-  ['max_5f_15',['max_',['../classfoo_1_1Counter.html#aa4800d7477459601788afd7868dc7b8a',1,'foo::Counter']]]
+  ['in_5f_18',['in_',['../classdigital__filters_1_1Filter.html#af3ac75bdcd74cff75dae291175bb8d60',1,'digital_filters::Filter']]],
+  ['initinput_19',['initInput',['../classdigital__filters_1_1Filter.html#a26026ee07a16e353ffed277700ab2e58',1,'digital_filters::Filter::initInput(const DataType &amp;input)'],['../classdigital__filters_1_1Filter.html#a8ce0cb092d7efb96792f5df3c59ec3ec',1,'digital_filters::Filter::initInput(const std::vector&lt; DataType &gt; &amp;input)']]],
+  ['initoutput_20',['initOutput',['../classdigital__filters_1_1Filter.html#a8eb905476b5a9194895b107581869be3',1,'digital_filters::Filter::initOutput(const DataType &amp;output)'],['../classdigital__filters_1_1Filter.html#a4f961ecd770dd98208f08e8e6d708a29',1,'digital_filters::Filter::initOutput(const std::vector&lt; DataType &gt; &amp;output)']]]
 ];

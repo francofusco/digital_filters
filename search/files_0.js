@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['foo_2ecpp_22',['foo.cpp',['../foo_8cpp.html',1,'']]],
-  ['foo_2ehpp_23',['foo.hpp',['../foo_8hpp.html',1,'']]],
-  ['foo_5fmain_2ecpp_24',['foo_main.cpp',['../foo__main_8cpp.html',1,'']]]
+  ['average_2ehpp_33',['average.hpp',['../average_8hpp.html',1,'']]],
+  ['average_2ehxx_34',['average.hxx',['../average_8hxx.html',1,'']]]
 ];

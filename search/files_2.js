@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['namespaces_2edox_26',['namespaces.dox',['../namespaces_8dox.html',1,'']]]
+  ['exponential_2ehpp_37',['exponential.hpp',['../exponential_8hpp.html',1,'']]],
+  ['exponential_2ehxx_38',['exponential.hxx',['../exponential_8hxx.html',1,'']]]
 ];

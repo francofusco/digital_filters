@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['foo_21',['foo',['../namespacefoo.html',1,'']]]
+  ['digital_5ffilters_32',['digital_filters',['../namespacedigital__filters.html',1,'']]]
 ];

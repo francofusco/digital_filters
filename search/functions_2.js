@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['factorial_32',['factorial',['../namespacefoo.html#a3e61061abf2ce47bc1b2515c77443def',1,'foo']]]
+  ['denominator_49',['denominator',['../classdigital__filters_1_1Filter.html#a40c9f0bf92dfb7de893152b23eada66c',1,'digital_filters::Filter']]]
 ];

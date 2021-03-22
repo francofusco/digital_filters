@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_33',['main',['../foo__main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'foo_main.cpp']]]
+  ['exponential_50',['exponential',['../namespacedigital__filters.html#ab44ce79528db357d1220939ab76db1e4',1,'digital_filters::exponential(const CoeffType &amp;alpha, std::vector&lt; CoeffType &gt; &amp;numerator, std::vector&lt; CoeffType &gt; &amp;denominator)'],['../namespacedigital__filters.html#a066edc61b2a0c907288392b53948b987',1,'digital_filters::exponential(const CoeffType &amp;sampling, const CoeffType &amp;time_constant, std::vector&lt; CoeffType &gt; &amp;numerator, std::vector&lt; CoeffType &gt; &amp;denominator)'],['../namespacedigital__filters.html#a518501bb74b3538ddfe962b2b800382a',1,'digital_filters::exponential(const CoeffType &amp;alpha)'],['../namespacedigital__filters.html#a5f317860619148ddc220f7fa1a5e237d',1,'digital_filters::exponential(const CoeffType &amp;sampling, const CoeffType &amp;time_constant)']]]
 ];

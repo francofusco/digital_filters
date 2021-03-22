@@ -22,9 +22,8 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "foo", "index.html", [
+  [ "digital_filters", "index.html", [
     [ "Main Page", "index.html", null ],
-    [ "Example of a Page created in MarkDown", "md_doc_extra_some_page.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -42,11 +41,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];

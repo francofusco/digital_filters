@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reset_17',['reset',['../classfoo_1_1Counter.html#a5e4d4a9ad217c5e36bfd5c58534a16ab',1,'foo::Counter']]]
+  ['namespaces_2edox_23',['namespaces.dox',['../namespaces_8dox.html',1,'']]],
+  ['numerator_24',['numerator',['../classdigital__filters_1_1Filter.html#aa181750fbf11a757460dd478c8bfa8cb',1,'digital_filters::Filter']]]
 ];

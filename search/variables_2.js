@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5f_38',['max_',['../classfoo_1_1Counter.html#aa4800d7477459601788afd7868dc7b8a',1,'foo::Counter']]]
+  ['in_5f_60',['in_',['../classdigital__filters_1_1Filter.html#af3ac75bdcd74cff75dae291175bb8d60',1,'digital_filters::Filter']]]
 ];

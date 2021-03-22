@@ -1,4 +1,4 @@
 var annotated_dup =
 [
-    [ "foo", "namespacefoo.html", "namespacefoo" ]
+    [ "digital_filters", "namespacedigital__filters.html", "namespacedigital__filters" ]
 ];

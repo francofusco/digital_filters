@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['counter_29',['Counter',['../classfoo_1_1Counter.html#abe696bd0f608ca60b1dc3b616b1f1975',1,'foo::Counter']]],
-  ['countonce_30',['countOnce',['../classfoo_1_1Counter.html#a9dac01edd554224fc6ba9b529bd82a17',1,'foo::Counter']]],
-  ['currentcount_31',['currentCount',['../classfoo_1_1Counter.html#a4b903b503ff93f3af32ee7742d82e1ae',1,'foo::Counter']]]
+  ['butterworth_48',['butterworth',['../namespacedigital__filters.html#a36d890cb8b2736e36b6e9f0d302c5925',1,'digital_filters::butterworth(unsigned int order, const CoeffType &amp;cutoff, const CoeffType &amp;sampling, std::vector&lt; CoeffType &gt; &amp;numerator, std::vector&lt; CoeffType &gt; &amp;denominator)'],['../namespacedigital__filters.html#ae33cb6145e2b04ecd8b63e9367140b2d',1,'digital_filters::butterworth(unsigned int order, const CoeffType &amp;cutoff, const CoeffType &amp;sampling)']]]
 ];
