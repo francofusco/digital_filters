@@ -1,22 +1,21 @@
-# add one test
-add_executable(test_foo test_foo.cpp)
+# Test utility functions
+add_executable(test_utilities test_utilities.cpp)
 # link GTest and pthread
-target_link_libraries(test_foo
+target_link_libraries(test_utilities
   ${PROJECT_NAME}
   ${GTEST_LIBRARIES}
   pthread
 )
 # make the test runnable by ctest
-gtest_discover_tests(test_foo)
+gtest_discover_tests(test_utilities)
 
-
-# add a second test, it uses "fixtures"
-add_executable(test_fixture test_fixture.cpp)
+# Test the main "Filter" class
+add_executable(test_filter test_filter.cpp)
 # link GTest and pthread
-target_link_libraries(test_fixture
+target_link_libraries(test_filter
   ${PROJECT_NAME}
   ${GTEST_LIBRARIES}
   pthread
 )
 # make the test runnable by ctest
-gtest_discover_tests(test_fixture)
+gtest_discover_tests(test_filter)
