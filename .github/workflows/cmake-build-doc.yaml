@@ -16,6 +16,14 @@ jobs:
     - name: Install dependencies
       working-directory: ${{github.workspace}}
       run: sudo apt install cmake doxygen graphviz
+      # Install pip for python3.
+    - name: Install pip3
+      working-directory: ${{github.workspace}}
+      run: sudo apt install python3-pip
+      # Install python3 dependencies (numpy and matplotlib).
+    - name: Install python3 dependencies
+      working-directory: ${{github.workspace}}
+      run: sudo pip3 install numpy matplotlib
     # Clone the repository.
     - uses: actions/checkout@v2
     # Create the build space.
