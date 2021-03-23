@@ -41,12 +41,12 @@ if(${BUILD_DOC})
     add_custom_target(
       generate_showcase_figure ALL
       COMMAND bash -c "./showcase ${SHOWCASE_DATA_FILE}"
-      COMMAND bash -c "python3 ${CMAKE_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PNG_FIGURE}"
-      COMMAND bash -c "python3 ${CMAKE_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PDF_FIGURE}"
+      COMMAND bash -c "python3 ${PROJECT_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PNG_FIGURE}"
+      COMMAND bash -c "python3 ${PROJECT_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PDF_FIGURE}"
       COMMAND bash -c "mv ${SHOWCASE_PNG_FIGURE} ${CMAKE_CURRENT_SOURCE_DIR}/imgs"
       COMMAND bash -c "mv ${SHOWCASE_PDF_FIGURE} ${CMAKE_CURRENT_SOURCE_DIR}/imgs"
       COMMAND bash -c "rm ${SHOWCASE_DATA_FILE}"
-      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+      WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
       COMMENT "Generating showcase figure for documentation"
     )
     add_dependencies(generate_showcase_figure showcase)
