@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['plot_5fshowcase_2epy_68',['plot_showcase.py',['../plot__showcase_8py.html',1,'']]]
+  ['utilities_2ehpp_47',['utilities.hpp',['../utilities_8hpp.html',1,'']]],
+  ['utilities_2ehxx_48',['utilities.hxx',['../utilities_8hxx.html',1,'']]]
 ];
