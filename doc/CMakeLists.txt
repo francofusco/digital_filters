@@ -40,7 +40,7 @@ if(${BUILD_DOC})
     set(SHOWCASE_PDF_FIGURE "showcase.pdf")
     add_custom_target(
       generate_showcase_figure ALL
-      COMMAND bash -c "./showcase ${SHOWCASE_DATA_FILE}"
+      COMMAND bash -c "./showcaseError ${SHOWCASE_DATA_FILE}"
       COMMAND bash -c "python3 ${PROJECT_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PNG_FIGURE}"
       COMMAND bash -c "python3 ${PROJECT_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PDF_FIGURE}"
       COMMAND bash -c "mv ${SHOWCASE_PNG_FIGURE} ${CMAKE_CURRENT_SOURCE_DIR}/imgs"
