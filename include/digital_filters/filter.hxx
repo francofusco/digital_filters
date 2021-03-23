@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdexcept>
+#include <digital_filters/utilities.hpp>
 
 
 namespace digital_filters {
@@ -34,7 +35,7 @@ Filter<DataType,CoeffType> Filter<DataType,CoeffType>::operator*(
   const Filter<DataType,CoeffType>& other
 ) const
 {
-  return Filter<DataType,CoeffType>( polyProd(b_, other.b), polyProd(a_, other.a_) );
+  return Filter<DataType,CoeffType>( polyProd(b_, other.b_), polyProd(a_, other.a_) );
 }
 
 
@@ -48,8 +49,8 @@ Filter<OtherDataType,OtherCoeffType> Filter<DataType,CoeffType>::as() const
   // create new filter
   auto filter = Filter<OtherDataType,OtherCoeffType>(b,a);
   // make sure to initialize the inputs and outputs
-  filter.initInput(std::vector<OtherCoeffType>(in_.begin(), in_.end()));
-  filter.initOutput(std::vector<OtherCoeffType>(out_.begin(), out_.end()));
+  filter.initInput(std::vector<OtherCoeffType>(in_.begin(), in_.end()-1));
+  filter.initOutput(std::vector<OtherCoeffType>(out_.begin(), out_.end()-1));
   // return the result
   return filter;
 }
@@ -71,16 +72,16 @@ void Filter<DataType,CoeffType>::initInput(
 )
 {
   // check sizes
-  if(input.size() != in_.size() && input.size() != in_.size()-1) {
+  if(input.size() != in_.size()-1) {
     throw std::runtime_error(
       "Filter::initInput: 'input' has " + std::to_string(input.size()) +
-      " elements, but only " + std::to_string(in_.size()) + " or " +
-      std::to_string(in_.size()-1) + " elements are allowed"
+      " elements, but only " + std::to_string(in_.size()-1) +
+      " elements are allowed"
     );
   }
   // copy the values
   for(unsigned int i=0; i<input.size(); i++)
-    in_[i] = input[i];
+    in_[i] = input[input.size()-i-1];
 }
 
 
@@ -100,16 +101,16 @@ void Filter<DataType,CoeffType>::initOutput(
 )
 {
   // check sizes
-  if(output.size() != out_.size() && output.size() != out_.size()-1) {
+  if(output.size() != out_.size()-1) {
     throw std::runtime_error(
       "Filter::initInput: 'output' has " + std::to_string(output.size()) +
-      " elements, but only " + std::to_string(out_.size()) + " or " +
-      std::to_string(out_.size()-1) + " elements are allowed"
+      " elements, but only " + std::to_string(out_.size()-1) +
+      " elements are allowed"
     );
   }
   // copy the values
   for(unsigned int i=0; i<output.size(); i++)
-    out_[i] = output[i];
+    out_[i] = output[output.size()-i-1];
 }
 
 
@@ -138,13 +139,67 @@ const DataType& Filter<DataType,CoeffType>::filter(
 
 
 template<class DataType, class CoeffType>
-std::vector<DataType> filter(
-  const std::vector<DataType>& x,
-  const std::vector<DataType>& y0
-)
+std::vector<DataType> Filter<DataType,CoeffType>::filter(
+  const std::vector<DataType>& x0,
+  const std::vector<DataType>& y0,
+  const std::vector<DataType>& x
+) const
 {
-  #warning "Filtering sequences: yet to be implemented"
-  throw std::runtime_error(std::string(__FILE__) + " line " + std::to_string(__LINE__) + std::string(__func__) + " not implemented");
+  // check sizes
+  if(x0.size() != b_.size() - 1) {
+    throw std::runtime_error(
+      "Filter::filter: initial conditions 'x0' have " +
+      std::to_string(x0.size()) + " elements, but " +
+      std::to_string(b_.size()) + " are required"
+    );
+  }
+  if(y0.size() != a_.size() - 1) {
+    throw std::runtime_error(
+      "Filter::filter: initial conditions 'y0' have " +
+      std::to_string(y0.size()) + " elements, but " +
+      std::to_string(a_.size()) + " are required"
+    );
+  }
+
+  // Prepare the output vector
+  std::vector<DataType> y;
+  y.reserve(x.size());
+
+  // main loop: do the filtering
+  for(unsigned int k=0; k<x.size(); k++) {
+    // Init the "current" output from the corresponding input
+    DataType yk = b_[0] * x[k];
+
+    // Add the contributions from past inputs
+    for(unsigned int i=1; i<b_.size(); i++) {
+      if(i > k) {
+        // use values from the initial conditions
+        yk = yk + b_[i] * x0[i-k-1];
+      }
+      else {
+        // use values from the input vector
+        yk = yk + b_[i] * x[k-i];
+      }
+    }
+
+    // Add the contributions from past outputs
+    for(unsigned int i=1; i<a_.size(); i++) {
+      if(i > k) {
+        // use values from the initial conditions
+        yk = yk - a_[i] * y0[i-k-1];
+      }
+      else {
+        // use values from the input vector
+        yk = yk - a_[i] * y[k-i];
+      }
+    }
+
+    // push the computed value into the result vector
+    y.push_back(yk);
+  }
+
+  // return the filtered vector
+  return y;
 }
 
 } // namespace digital_filters

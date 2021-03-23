@@ -53,7 +53,9 @@ public:
     * @param other filter that should be concatenated to `this`.
     * @return a new filter which is the concatenation of `this` and `other`.
     */
-  Filter<DataType,CoeffType> operator*(const Filter<DataType,CoeffType>& other)const;
+  Filter<DataType,CoeffType> operator*(
+    const Filter<DataType,CoeffType>& other
+  )const;
 
   /// Change filter template types.
   /** @tparam OtherDataType new type of the input/output signals.
@@ -80,7 +82,9 @@ public:
     * @param input value \f$ x^\star \f$ to be used to initialize all samples,
     *   *i.e.*, \f$ x_{k}=x^\star, x_{k-1}=x^\star, x_{k-2}=x^\star, \cdots \f$.
     */
-  void initInput(const DataType& input);
+  void initInput(
+    const DataType& input
+  );
 
   /// Set initial conditions on the input.
   /** To evaluate the output of the filter at the discrete time-step \f$ k \f$,
@@ -88,14 +92,15 @@ public:
     * *i.e.*, \f$ x_{k}, x_{k-1}, x_{k-2}, \cdots \f$. This function allows to
     * set the past values of \f$x\f$ (the current one will be set while calling
     * `filter()`).
-    * @param input values \f$ x_{k-1}, x_{k-2}, \cdots \f$. Note that the
-    *   correspondance is such that `input[i]` corresponds to \f$x_{k-i-1}\f$.
-    *   In other words, the sequence starts with the most recent value. Note
-    *   that the number of required values equals the dimension of the numerator
-    *   minus one. However, you can pass as many values as the numerator - the
-    *   last one will be ignored and dropped as soon as `filter()` is called.
+    * @param input values \f$ \cdots, x_{k-2}, x_{k-1} \f$. Samples should be
+    *   sorted in time-ascending order. In other words, the sequence starts
+    *   with the oldest value and ends with the most recent sample. Note
+    *   that the number of required values equals the dimension of the
+    *   denominator minus one.
     */
-  void initInput(const std::vector<DataType>& input);
+  void initInput(
+    const std::vector<DataType>& input
+  );
 
   /// Set initial conditions on the output.
   /** To evaluate the output of the filter at the discrete time-step \f$ k \f$,
@@ -105,33 +110,48 @@ public:
     * @param output value \f$ y^\star \f$ to be used to initialize all samples,
     *   *i.e.*, \f$ y_{k-1}=y^\star, y_{k-2}=y^\star, \cdots \f$.
     */
-  void initOutput(const DataType& output);
+  void initOutput(
+    const DataType& output
+  );
 
   /// Set initial conditions on the output.
   /** To evaluate the output of the filter at the discrete time-step \f$ k \f$,
     * it is necessary to use the past values of the output,
     * *i.e.*, \f$ y_{k-1}, y_{k-2}, \cdots \f$. This function allows to
     * set the past values of \f$y\f$.
-    * @param output values \f$ y_{k-1}, y_{k-2}, \cdots \f$. Note that the
-    *   correspondance is such that `output[i]` corresponds to \f$y_{k-i-1}\f$.
-    *   In other words, the sequence starts with the most recent value. Note
+    * @param output values \f$ \cdots, y_{k-2}, y_{k-1} \f$. Samples should be
+    *   sorted in time-ascending order. In other words, the sequence starts
+    *   with the oldest value and ends with the most recent sample. Note
     *   that the number of required values equals the dimension of the
-    *   denominator minus one. However, you can pass as many values as the
-    *   denominator - the last one will be ignored and dropped as soon as
-    *   `filter()` is called.
+    *   denominator minus one.
     */
-  void initOutput(const std::vector<DataType>& output);
+  void initOutput(
+    const std::vector<DataType>& output
+  );
 
   /// Filter the current input.
-  const DataType& filter(const DataType& x);
+  const DataType& filter(
+    const DataType& x
+  );
 
   /// Filter a whole sequence.
-  /** Internal IO buffers will not be updated.
-    * @param x Input to be filtered.
-    * @param y0 Initial conditions on the output.
-    * @warning Not implemented yet!
+  /** Internal buffers will not be updated, meaning that the conditions
+    * @param x input signal to be filtered. It should be sorted in
+    *   time-ascending order, *i.e.*, so that `x[k]` corresponds to the
+    *   discrete-time sample \f$ x_k \f$.
+    * @param x0 initial input conditions. It should contain "past" input
+    *   samples sorted in time-ascending order, *i.e.*,
+    *   \f$ \cdots, x_{k-3}, x_{k-2}, x_{k-1} \f$
+    * @param y0 initial output conditions. It should contain "past" output
+    *   samples sorted in time-ascending order, *i.e.*,
+    *   \f$ \cdots, y_{-3}, y_{-2}, y_{-1} \f$
+    * @return sequence of filtered outputs \f$ y_0, y_1, y_2, \cdots \f$
     */
-  std::vector<DataType> filter(const std::vector<DataType>& x, const std::vector<DataType>& y0);
+  std::vector<DataType> filter(
+    const std::vector<DataType>& x0,
+    const std::vector<DataType>& y0,
+    const std::vector<DataType>& x
+  ) const;
 
 private:
   std::vector<CoeffType> b_; ///< Numerator of the transfer function.

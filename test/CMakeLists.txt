@@ -10,12 +10,12 @@ target_link_libraries(test_utilities
 gtest_discover_tests(test_utilities)
 
 # Test the main "Filter" class
-add_executable(test_filter test_filter.cpp)
+add_executable(test_filters test_filters.cpp)
 # link GTest and pthread
-target_link_libraries(test_filter
+target_link_libraries(test_filters
   ${PROJECT_NAME}
   ${GTEST_LIBRARIES}
   pthread
 )
 # make the test runnable by ctest
-gtest_discover_tests(test_filter)
+gtest_discover_tests(test_filters)
