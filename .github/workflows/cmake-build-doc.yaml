@@ -11,6 +11,14 @@ jobs:
         shell: bash
     # Set of commands to be run.
     steps:
+    - name: HOPE THIS WORKS
+      working-directory: ${{github.workspace}}/build
+      run: echo "HELLO MAIN"
+      if: contains('refs/heads/main', github.ref)
+    - name: HOPE THIS WORKS AGAIN
+      working-directory: ${{github.workspace}}/build
+      run: echo "HELLO FRANCO-TEST"
+      if: contains('refs/heads/franco-test', github.ref)
     # Install CMake and Doxygen.
     - name: Install dependencies
       working-directory: ${{github.workspace}}
