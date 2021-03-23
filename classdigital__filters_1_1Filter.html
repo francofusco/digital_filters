@@ -136,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf2c8670909207dab9c74981f2a11428"><td class="memItemLeft" align="right" valign="top">const DataType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdigital__filters_1_1Filter.html#abf2c8670909207dab9c74981f2a11428">filter</a> (const DataType &amp;x)</td></tr>
 <tr class="memdesc:abf2c8670909207dab9c74981f2a11428"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> the current input.  <a href="classdigital__filters_1_1Filter.html#abf2c8670909207dab9c74981f2a11428">More...</a><br /></td></tr>
 <tr class="separator:abf2c8670909207dab9c74981f2a11428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab01ccbac29b289f0582280f960501867"><td class="memItemLeft" align="right" valign="top">std::vector&lt; DataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdigital__filters_1_1Filter.html#ab01ccbac29b289f0582280f960501867">filter</a> (const std::vector&lt; DataType &gt; &amp;x, const std::vector&lt; DataType &gt; &amp;y0)</td></tr>
-<tr class="memdesc:ab01ccbac29b289f0582280f960501867"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> a whole sequence.  <a href="classdigital__filters_1_1Filter.html#ab01ccbac29b289f0582280f960501867">More...</a><br /></td></tr>
-<tr class="separator:ab01ccbac29b289f0582280f960501867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e696aaec04d9dd7c3545a3d8cb84bfb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; DataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdigital__filters_1_1Filter.html#a2e696aaec04d9dd7c3545a3d8cb84bfb">filter</a> (const std::vector&lt; DataType &gt; &amp;x0, const std::vector&lt; DataType &gt; &amp;y0, const std::vector&lt; DataType &gt; &amp;x) const</td></tr>
+<tr class="memdesc:a2e696aaec04d9dd7c3545a3d8cb84bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> a whole sequence.  <a href="classdigital__filters_1_1Filter.html#a2e696aaec04d9dd7c3545a3d8cb84bfb">More...</a><br /></td></tr>
+<tr class="separator:a2e696aaec04d9dd7c3545a3d8cb84bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -294,8 +294,8 @@ template&lt;class DataType , class CoeffType &gt; </div>
 
 </div>
 </div>
-<a id="ab01ccbac29b289f0582280f960501867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab01ccbac29b289f0582280f960501867">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/2]</span></h2>
+<a id="a2e696aaec04d9dd7c3545a3d8cb84bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e696aaec04d9dd7c3545a3d8cb84bfb">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,34 +303,41 @@ template&lt;class DataType , class CoeffType &gt; </div>
 template&lt;class DataType , class CoeffType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;DataType&gt; <a class="el" href="classdigital__filters_1_1Filter.html">digital_filters::Filter</a>&lt; DataType, CoeffType &gt;::filter </td>
+          <td class="memname">std::vector&lt; DataType &gt; <a class="el" href="classdigital__filters_1_1Filter.html">digital_filters::Filter</a>&lt; DataType, CoeffType &gt;::filter </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; DataType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>x0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; DataType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>y0</em>&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; DataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> a whole sequence. </p>
-<p>Internal IO buffers will not be updated. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Internal buffers will not be updated, meaning that the conditions </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>Input to be filtered. </td></tr>
-    <tr><td class="paramname">y0</td><td>Initial conditions on the output. </td></tr>
+    <tr><td class="paramname">x</td><td>input signal to be filtered. It should be sorted in time-ascending order, <em>i.e.</em>, so that <code>x[k]</code> corresponds to the discrete-time sample \( x_k \). </td></tr>
+    <tr><td class="paramname">x0</td><td>initial input conditions. It should contain "past" input samples sorted in time-ascending order, <em>i.e.</em>, \( \cdots, x_{k-3}, x_{k-2}, x_{k-1} \) </td></tr>
+    <tr><td class="paramname">y0</td><td>initial output conditions. It should contain "past" output samples sorted in time-ascending order, <em>i.e.</em>, \( \cdots, y_{-3}, y_{-2}, y_{-1} \) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>Not implemented yet! </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>sequence of filtered outputs \( y_0, y_1, y_2, \cdots \) </dd></dl>
 
 </div>
 </div>
@@ -383,7 +390,7 @@ template&lt;class DataType , class CoeffType &gt; </div>
 <p>Set initial conditions on the input. </p>
 <p>To evaluate the output of the filter at the discrete time-step \( k \), it is necessary to use the current and the past values of the input, <em>i.e.</em>, \( x_{k}, x_{k-1}, x_{k-2}, \cdots \). This function allows to set the past values of \(x\) (the current one will be set while calling <code><a class="el" href="classdigital__filters_1_1Filter.html#abf2c8670909207dab9c74981f2a11428" title="Filter the current input.">filter()</a></code>). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>values \( x_{k-1}, x_{k-2}, \cdots \). Note that the correspondance is such that <code>input[i]</code> corresponds to \(x_{k-i-1}\). In other words, the sequence starts with the most recent value. Note that the number of required values equals the dimension of the numerator minus one. However, you can pass as many values as the numerator - the last one will be ignored and dropped as soon as <code><a class="el" href="classdigital__filters_1_1Filter.html#abf2c8670909207dab9c74981f2a11428" title="Filter the current input.">filter()</a></code> is called. </td></tr>
+    <tr><td class="paramname">input</td><td>values \( \cdots, x_{k-2}, x_{k-1} \). Samples should be sorted in time-ascending order. In other words, the sequence starts with the oldest value and ends with the most recent sample. Note that the number of required values equals the dimension of the denominator minus one. </td></tr>
   </table>
   </dd>
 </dl>
@@ -439,7 +446,7 @@ template&lt;class DataType , class CoeffType &gt; </div>
 <p>Set initial conditions on the output. </p>
 <p>To evaluate the output of the filter at the discrete time-step \( k \), it is necessary to use the past values of the output, <em>i.e.</em>, \( y_{k-1}, y_{k-2}, \cdots \). This function allows to set the past values of \(y\). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">output</td><td>values \( y_{k-1}, y_{k-2}, \cdots \). Note that the correspondance is such that <code>output[i]</code> corresponds to \(y_{k-i-1}\). In other words, the sequence starts with the most recent value. Note that the number of required values equals the dimension of the denominator minus one. However, you can pass as many values as the denominator - the last one will be ignored and dropped as soon as <code><a class="el" href="classdigital__filters_1_1Filter.html#abf2c8670909207dab9c74981f2a11428" title="Filter the current input.">filter()</a></code> is called. </td></tr>
+    <tr><td class="paramname">output</td><td>values \( \cdots, y_{k-2}, y_{k-1} \). Samples should be sorted in time-ascending order. In other words, the sequence starts with the oldest value and ends with the most recent sample. Note that the number of required values equals the dimension of the denominator minus one. </td></tr>
   </table>
   </dd>
 </dl>

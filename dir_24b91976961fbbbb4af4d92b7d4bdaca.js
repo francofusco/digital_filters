@@ -4,7 +4,7 @@ var dir_24b91976961fbbbb4af4d92b7d4bdaca =
     [ "filter.hpp", "filter_8hpp.html", [
       [ "Filter", "classdigital__filters_1_1Filter.html", "classdigital__filters_1_1Filter" ]
     ] ],
-    [ "filter.hxx", "filter_8hxx.html", "filter_8hxx" ],
+    [ "filter.hxx", "filter_8hxx.html", null ],
     [ "filters.hpp", "filters_8hpp.html", null ],
     [ "utilities.hpp", "utilities_8hpp.html", "utilities_8hpp" ],
     [ "utilities.hxx", "utilities_8hxx.html", "utilities_8hxx" ]

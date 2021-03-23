@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_20page_21',['Main Page',['../index.html',1,'']]],
-  ['main_5fpage_2emd_22',['main_page.md',['../main__page_8md.html',1,'']]]
+  ['header_26',['header',['../namespaceplot__showcase.html#a5c3eb40cedca79116e8ead9a50d60920',1,'plot_showcase']]],
+  ['hspace_27',['hspace',['../namespaceplot__showcase.html#a3844a9971788aa17c9e3f32a2dfb9715',1,'plot_showcase']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['filter_14',['Filter',['../classdigital__filters_1_1Filter.html',1,'digital_filters::Filter&lt; DataType, CoeffType &gt;'],['../classdigital__filters_1_1Filter.html#a6c6f55f11621a7d868ce726e5a06b8e7',1,'digital_filters::Filter::Filter(const std::vector&lt; CoeffType &gt; &amp;b_num, const std::vector&lt; CoeffType &gt; &amp;a_den)'],['../classdigital__filters_1_1Filter.html#abf2c8670909207dab9c74981f2a11428',1,'digital_filters::Filter::filter(const DataType &amp;x)'],['../classdigital__filters_1_1Filter.html#ab01ccbac29b289f0582280f960501867',1,'digital_filters::Filter::filter(const std::vector&lt; DataType &gt; &amp;x, const std::vector&lt; DataType &gt; &amp;y0)'],['../namespacedigital__filters.html#a2a4f8aaf2ebdfef5a620671ca7ee9048',1,'digital_filters::filter()']]],
-  ['filter_2ehpp_15',['filter.hpp',['../filter_8hpp.html',1,'']]],
-  ['filter_2ehxx_16',['filter.hxx',['../filter_8hxx.html',1,'']]],
-  ['filters_2ehpp_17',['filters.hpp',['../filters_8hpp.html',1,'']]]
+  ['exponential_16',['exponential',['../namespacedigital__filters.html#ab44ce79528db357d1220939ab76db1e4',1,'digital_filters::exponential(const CoeffType &amp;alpha, std::vector&lt; CoeffType &gt; &amp;numerator, std::vector&lt; CoeffType &gt; &amp;denominator)'],['../namespacedigital__filters.html#a066edc61b2a0c907288392b53948b987',1,'digital_filters::exponential(const CoeffType &amp;sampling, const CoeffType &amp;time_constant, std::vector&lt; CoeffType &gt; &amp;numerator, std::vector&lt; CoeffType &gt; &amp;denominator)'],['../group__CommonFilters.html#ga518501bb74b3538ddfe962b2b800382a',1,'digital_filters::exponential(const CoeffType &amp;alpha)'],['../group__CommonFilters.html#ga5f317860619148ddc220f7fa1a5e237d',1,'digital_filters::exponential(const CoeffType &amp;sampling, const CoeffType &amp;time_constant)']]],
+  ['exponential_2ehpp_17',['exponential.hpp',['../exponential_8hpp.html',1,'']]],
+  ['exponential_2ehxx_18',['exponential.hxx',['../exponential_8hxx.html',1,'']]]
 ];

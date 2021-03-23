@@ -4,6 +4,7 @@ var dir_71cce9c864f5e3aad2d3daa4fbb7c52c =
     [ "average.hxx", "average_8hxx.html", "average_8hxx" ],
     [ "butterworth.hpp", "butterworth_8hpp.html", "butterworth_8hpp" ],
     [ "butterworth.hxx", "butterworth_8hxx.html", "butterworth_8hxx" ],
+    [ "derivatives.hpp", "derivatives_8hpp.html", null ],
     [ "exponential.hpp", "exponential_8hpp.html", "exponential_8hpp" ],
     [ "exponential.hxx", "exponential_8hxx.html", "exponential_8hxx" ]
 ];

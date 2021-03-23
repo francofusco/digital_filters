@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['utilities_2ehpp_28',['utilities.hpp',['../utilities_8hpp.html',1,'']]],
-  ['utilities_2ehxx_29',['utilities.hxx',['../utilities_8hxx.html',1,'']]]
+  ['namespaces_2edox_37',['namespaces.dox',['../namespaces_8dox.html',1,'']]],
+  ['numerator_38',['numerator',['../classdigital__filters_1_1Filter.html#aa181750fbf11a757460dd478c8bfa8cb',1,'digital_filters::Filter']]]
 ];

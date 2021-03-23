@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['operator_2a_25',['operator*',['../classdigital__filters_1_1Filter.html#a1f89a75a349df24392e95084f880ef59',1,'digital_filters::Filter']]],
-  ['out_5f_26',['out_',['../classdigital__filters_1_1Filter.html#a3094029502a747a8a769ef7f09d6f224',1,'digital_filters::Filter']]]
+  ['label_31',['label',['../namespaceplot__showcase.html#aa539a4a71307f89d6080ce8e797c42c2',1,'plot_showcase']]],
+  ['left_32',['left',['../namespaceplot__showcase.html#a2e09ca77e599fdb3f7714498f7665956',1,'plot_showcase']]],
+  ['linewidth_33',['linewidth',['../namespaceplot__showcase.html#a154f909b2e69523952f974dcdb1fabf3',1,'plot_showcase']]]
 ];
