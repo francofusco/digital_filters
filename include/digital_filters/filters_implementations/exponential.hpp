@@ -44,6 +44,8 @@ void exponential(
 
 
 /// Returns an exponential filter.
+/** @ingroup CommonFilters
+  */
 template <class DataType, class CoeffType>
 Filter<DataType,CoeffType> exponential(
   const CoeffType& alpha
@@ -51,6 +53,8 @@ Filter<DataType,CoeffType> exponential(
 
 
 /// Returns an exponential filter.
+/** @ingroup CommonFilters
+  */
 template <class DataType, class CoeffType>
 Filter<DataType,CoeffType> exponential(
   const CoeffType& sampling,

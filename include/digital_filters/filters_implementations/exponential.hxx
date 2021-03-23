@@ -26,8 +26,8 @@ void exponential(
   std::vector<CoeffType>& denominator
 )
 {
-  using std::exp;
-  exponential<CoeffType>(exp(-sampling/time_constant), numerator, denominator);
+  using ::exp;
+  exponential<CoeffType>(1-exp(-sampling/time_constant), numerator, denominator);
 }
 
 

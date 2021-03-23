@@ -25,6 +25,8 @@ void average(
 
 
 /// Returns an average filter.
+/** @ingroup CommonFilters
+  */
 template <class DataType, class CoeffType>
 Filter<DataType,CoeffType> average(
   int window_size,
@@ -33,6 +35,8 @@ Filter<DataType,CoeffType> average(
 
 
 /// Returns an average filter.
+/** @ingroup CommonFilters
+  */
 template <class DataType, class CoeffType>
 Filter<DataType,CoeffType> average(
   int window_size

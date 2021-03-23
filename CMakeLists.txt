@@ -22,6 +22,14 @@ target_include_directories(${PROJECT_NAME}
 )
 
 
+############
+# BINARIES #
+############
+
+add_executable(showcase src/bin/showcase.cpp)
+target_link_libraries(showcase ${PROJECT_NAME})
+
+
 ###########
 # INSTALL #
 ###########

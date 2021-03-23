@@ -17,6 +17,8 @@ void butterworth(
 
 
 /// Returns a butterworth filter.
+/** @ingroup CommonFilters
+  */
 template <class DataType, class CoeffType>
 Filter<DataType,CoeffType> butterworth(
   unsigned int order,

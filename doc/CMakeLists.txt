@@ -34,6 +34,22 @@ set_property(CACHE DOXYGEN_MAKE_LATEX PROPERTY STRINGS YES NO)
 # Process the documentation if needed.
 if(${BUILD_DOC})
   if(${Doxygen_FOUND})
+    # Custom target that will generate a figure
+    set(SHOWCASE_DATA_FILE "showcase_data.txt")
+    set(SHOWCASE_PNG_FIGURE "showcase.png")
+    set(SHOWCASE_PDF_FIGURE "showcase.pdf")
+    add_custom_target(
+      generate_showcase_figure ALL
+      COMMAND bash -c "./showcase ${SHOWCASE_DATA_FILE}"
+      COMMAND bash -c "python3 ${CMAKE_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PNG_FIGURE}"
+      COMMAND bash -c "python3 ${CMAKE_SOURCE_DIR}/src/bin/plot_showcase.py ${SHOWCASE_DATA_FILE} ${SHOWCASE_PDF_FIGURE}"
+      COMMAND bash -c "mv ${SHOWCASE_PNG_FIGURE} ${CMAKE_CURRENT_SOURCE_DIR}/imgs"
+      COMMAND bash -c "mv ${SHOWCASE_PDF_FIGURE} ${CMAKE_CURRENT_SOURCE_DIR}/imgs"
+      COMMAND bash -c "rm ${SHOWCASE_DATA_FILE}"
+      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+      COMMENT "Generating showcase figure for documentation"
+    )
+    add_dependencies(generate_showcase_figure showcase)
     # Perform substitution of variables in the doxy-file.
     set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/doxyfile.in)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/doxyfile)
@@ -46,6 +62,8 @@ if(${BUILD_DOC})
       COMMENT "Generating API documentation with Doxygen"
       VERBATIM
     )
+    add_dependencies(doc generate_showcase_figure)
+    # allow to compile the latex manual
     if(${DOXYGEN_MAKE_LATEX})
       set(DOXYGEN_LATEX_LOG_FILE ${CMAKE_CURRENT_BINARY_DIR}/doc-latex.log)
       add_custom_target(
