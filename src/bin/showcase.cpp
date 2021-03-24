@@ -8,11 +8,6 @@ typedef digital_filters::Filter<double,double> FilterDD;
 int main(int argc, char** argv) {
   // get the name of the file
   std::string filename = argc < 2 ? "filter.txt" : argv[1];
-  if(argc < 2)
-    filename = "filter.txt";
-  else
-    filename = argv[1];
-
   // open the file
   std::ofstream file;
   file.open(filename);

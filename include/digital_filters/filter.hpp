@@ -12,6 +12,8 @@ namespace digital_filters {
 /**
   * @tparam DataType Type of the input/output signals
   * @tparam CoeffType Type of the coefficients of the transfer function.
+  *
+  * @todo Add a method to find initial conditions.
   */
 template <class DataType, class CoeffType>
 class Filter {
@@ -135,7 +137,8 @@ public:
   );
 
   /// Filter a whole sequence.
-  /** Internal buffers will not be updated, meaning that the conditions
+  /** Internal buffers will not be updated, meaning that the initial conditions
+    * of the filter will not change after calling this method.
     * @param x input signal to be filtered. It should be sorted in
     *   time-ascending order, *i.e.*, so that `x[k]` corresponds to the
     *   discrete-time sample \f$ x_k \f$.
@@ -150,6 +153,20 @@ public:
   std::vector<DataType> filter(
     const std::vector<DataType>& x0,
     const std::vector<DataType>& y0,
+    const std::vector<DataType>& x
+  ) const;
+
+  /// Bi-directional filtering of a whole sequence.
+  /** Filter a given signal from both sides by applying the filter once and
+    * then a second time on the reversed result.
+    * @param x input signal to be filtered. It should be sorted in
+    *   time-ascending order, *i.e.*, so that `x[k]` corresponds to the
+    *   discrete-time sample \f$ x_k \f$.
+    * @return sequence of filtered outputs \f$ y_0, y_1, y_2, \cdots \f$
+    * @note for the moment, the initial conditions are obtained by holding
+    *   the signal on the left and on the right.
+    */
+  std::vector<DataType> filter2(
     const std::vector<DataType>& x
   ) const;
 

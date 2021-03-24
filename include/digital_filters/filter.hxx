@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdexcept>
+#include <algorithm>
 #include <digital_filters/utilities.hpp>
 
 
@@ -140,9 +141,9 @@ const DataType& Filter<DataType,CoeffType>::filter(
 
 template<class DataType, class CoeffType>
 std::vector<DataType> Filter<DataType,CoeffType>::filter(
+  const std::vector<DataType>& x,
   const std::vector<DataType>& x0,
-  const std::vector<DataType>& y0,
-  const std::vector<DataType>& x
+  const std::vector<DataType>& y0
 ) const
 {
   // check sizes
@@ -200,6 +201,31 @@ std::vector<DataType> Filter<DataType,CoeffType>::filter(
 
   // return the filtered vector
   return y;
+}
+
+
+template<class DataType, class CoeffType>
+std::vector<DataType> Filter<DataType,CoeffType>::filter2(
+  const std::vector<DataType>& x
+) const
+{
+  // filter on one side
+  std::vector<DataType> y = filter(
+    x,
+    std::vector<DataType>(b_.size()-1, x.at(0)),
+    std::vector<DataType>(a_.size()-1, x.at(0))
+  );
+  // reverse the signal
+  std::reverse(y.begin(), y.end());
+  // filter again
+  std::vector<DataType> z = filter(
+    y,
+    std::vector<DataType>(b_.size()-1, y.at(0)),
+    std::vector<DataType>(a_.size()-1, y.at(0))
+  );
+  // reverse the final result and return it
+  std::reverse(z.begin(), z.end());
+  return z;
 }
 
 } // namespace digital_filters

@@ -11,5 +11,6 @@
   * @image html showcase.png "Noisy signal filtered using different filters"
   * @image latex showcase.pdf "Noisy signal filtered using different filters" width=0.8\textwidth
   *
-  * 
+  * @image html filter2.png "Comparison of simple and double filtering using a Butterworth filter"
+  * @image latex filter2.pdf "Comparison of simple and double filtering using a Butterworth filter" width=0.8\textwidth
   */

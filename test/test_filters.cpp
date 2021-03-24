@@ -43,7 +43,7 @@ TEST(TestFilters, FilterSequence) {
 
   // Create a whole input sequence, then filter it
   std::vector<double> xseq(20, 5.0);
-  auto yseq = filterdd.filter(x0, y0, xseq);
+  auto yseq = filterdd.filter(xseq, x0, y0);
 
   // make sure that we get the same outputs (up to a small tolerance)
   for(unsigned int i=0; i<xseq.size(); i++) {

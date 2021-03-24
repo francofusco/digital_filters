@@ -65,7 +65,7 @@ TEST_F(ButterworthFixture, Filtering) {
   std::vector<double> y0(filter.denominator().size()-1);
   std::vector<double> x = { 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
   std::vector<double> y = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.2363147883012453, 0.9021718567462329, 1.219744701690328, 0.905140172370198, 0.9623609747014226, 1.0957692260718024, 0.9183129814554234, 1.030563189595846, 1.0209410448749332, 0.9500231315585492, 0.8145064916887352, 0.0670177297560195, -0.21652124034665265, 0.1143303065500686, 0.007708014753141312 };
-  std::vector<double> yfilt = filter.filter(x0, y0, x);
+  std::vector<double> yfilt = filter.filter(x, x0, y0);
 
   for(unsigned int i=0; i<y.size(); i++) {
     ASSERT_FLOAT_EQ(y.at(i), yfilt.at(i)) << "Mismatching sample i=" << i;

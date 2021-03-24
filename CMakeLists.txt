@@ -29,6 +29,9 @@ target_include_directories(${PROJECT_NAME}
 add_executable(showcase src/bin/showcase.cpp)
 target_link_libraries(showcase ${PROJECT_NAME})
 
+add_executable(filtfilt src/bin/filtfilt.cpp)
+target_link_libraries(filtfilt ${PROJECT_NAME})
+
 
 ###########
 # INSTALL #
