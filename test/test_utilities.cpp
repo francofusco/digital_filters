@@ -1,6 +1,5 @@
 #include <digital_filters/utilities.hpp>
 #include <gtest/gtest.h>
-#include <sstream>
 
 
 void checkEquals(

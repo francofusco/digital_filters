@@ -1,6 +1,5 @@
 #include <digital_filters/filters.hpp>
 #include <gtest/gtest.h>
-#include <sstream>
 #include <cmath>
 
 typedef digital_filters::Filter<double,double> FilterDD;
