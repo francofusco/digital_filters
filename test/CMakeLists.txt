@@ -9,6 +9,7 @@ target_link_libraries(test_utilities
 # make the test runnable by ctest
 gtest_discover_tests(test_utilities)
 
+
 # Test the main "Filter" class
 add_executable(test_filters test_filters.cpp)
 # link GTest and pthread
@@ -19,3 +20,15 @@ target_link_libraries(test_filters
 )
 # make the test runnable by ctest
 gtest_discover_tests(test_filters)
+
+
+# Test the Butterworth filter implementation
+add_executable(test_butterworth test_butterworth.cpp)
+# link GTest and pthread
+target_link_libraries(test_butterworth
+  ${PROJECT_NAME}
+  ${GTEST_LIBRARIES}
+  pthread
+)
+# make the test runnable by ctest
+gtest_discover_tests(test_butterworth)
