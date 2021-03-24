@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['header_27',['header',['../namespaceplot.html#a81ee3b83101197d4a1c1627fdd88d685',1,'plot']]],
-  ['hspace_28',['hspace',['../namespaceplot.html#a0441a7d5fccefaf05387ec948adff58f',1,'plot']]]
+  ['in_5f_21',['in_',['../classdigital__filters_1_1Filter.html#af3ac75bdcd74cff75dae291175bb8d60',1,'digital_filters::Filter']]],
+  ['initinput_22',['initInput',['../classdigital__filters_1_1Filter.html#a26026ee07a16e353ffed277700ab2e58',1,'digital_filters::Filter::initInput(const DataType &amp;input)'],['../classdigital__filters_1_1Filter.html#a8ce0cb092d7efb96792f5df3c59ec3ec',1,'digital_filters::Filter::initInput(const std::vector&lt; DataType &gt; &amp;input)']]],
+  ['initoutput_23',['initOutput',['../classdigital__filters_1_1Filter.html#a8eb905476b5a9194895b107581869be3',1,'digital_filters::Filter::initOutput(const DataType &amp;output)'],['../classdigital__filters_1_1Filter.html#a4f961ecd770dd98208f08e8e6d708a29',1,'digital_filters::Filter::initOutput(const std::vector&lt; DataType &gt; &amp;output)']]]
 ];

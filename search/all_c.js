@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['plot_43',['plot',['../namespaceplot.html',1,'']]],
-  ['plot_2epy_44',['plot.py',['../plot_8py.html',1,'']]],
-  ['polyprod_45',['polyProd',['../namespacedigital__filters.html#af08212b97a015752175501ccb418681d',1,'digital_filters']]]
+  ['utilities_2ehpp_32',['utilities.hpp',['../utilities_8hpp.html',1,'']]],
+  ['utilities_2ehxx_33',['utilities.hxx',['../utilities_8hxx.html',1,'']]]
 ];

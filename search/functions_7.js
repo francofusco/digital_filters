@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['numerator_83',['numerator',['../classdigital__filters_1_1Filter.html#aa181750fbf11a757460dd478c8bfa8cb',1,'digital_filters::Filter']]]
+  ['operator_2a_61',['operator*',['../classdigital__filters_1_1Filter.html#a1f89a75a349df24392e95084f880ef59',1,'digital_filters::Filter']]]
 ];

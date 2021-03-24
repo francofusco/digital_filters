@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right_46',['right',['../namespaceplot.html#a1d2cb03f2431337863e895a8d03c675f',1,'plot']]]
+  ['vec2str_34',['vec2str',['../namespacedigital__filters.html#a32043324bfcf500d179ed7e395b266f1',1,'digital_filters']]]
 ];

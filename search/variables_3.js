@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fig_92',['fig',['../namespaceplot.html#a7f6dcb7b67e20fef03047647451fa284',1,'plot']]],
-  ['filename_93',['filename',['../namespaceplot.html#a688e124ca4b3366e827ce0a76c2023f5',1,'plot']]]
+  ['out_5f_67',['out_',['../classdigital__filters_1_1Filter.html#a3094029502a747a8a769ef7f09d6f224',1,'digital_filters::Filter']]]
 ];
