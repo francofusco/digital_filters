@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['in_5f_63',['in_',['../classdigital__filters_1_1Filter.html#af3ac75bdcd74cff75dae291175bb8d60',1,'digital_filters::Filter']]]
+  ['data_91',['data',['../namespaceplot.html#ae47c3a31c8a281dedb1f59537dab7c38',1,'plot']]]
 ];

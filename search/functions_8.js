@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['polyprod_59',['polyProd',['../namespacedigital__filters.html#af08212b97a015752175501ccb418681d',1,'digital_filters']]]
+  ['operator_2a_84',['operator*',['../classdigital__filters_1_1Filter.html#a1f89a75a349df24392e95084f880ef59',1,'digital_filters::Filter']]]
 ];

@@ -139,6 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e696aaec04d9dd7c3545a3d8cb84bfb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; DataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdigital__filters_1_1Filter.html#a2e696aaec04d9dd7c3545a3d8cb84bfb">filter</a> (const std::vector&lt; DataType &gt; &amp;x0, const std::vector&lt; DataType &gt; &amp;y0, const std::vector&lt; DataType &gt; &amp;x) const</td></tr>
 <tr class="memdesc:a2e696aaec04d9dd7c3545a3d8cb84bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> a whole sequence.  <a href="classdigital__filters_1_1Filter.html#a2e696aaec04d9dd7c3545a3d8cb84bfb">More...</a><br /></td></tr>
 <tr class="separator:a2e696aaec04d9dd7c3545a3d8cb84bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0418bba7c4f3dd124224cb5300c1f12f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; DataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdigital__filters_1_1Filter.html#a0418bba7c4f3dd124224cb5300c1f12f">filter2</a> (const std::vector&lt; DataType &gt; &amp;x) const</td></tr>
+<tr class="memdesc:a0418bba7c4f3dd124224cb5300c1f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bi-directional filtering of a whole sequence.  <a href="classdigital__filters_1_1Filter.html#a0418bba7c4f3dd124224cb5300c1f12f">More...</a><br /></td></tr>
+<tr class="separator:a0418bba7c4f3dd124224cb5300c1f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -163,10 +166,11 @@ class digital_filters::Filter&lt; DataType, CoeffType &gt;</h3>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">DataType</td><td>Type of the input/output signals </td></tr>
-    <tr><td class="paramname">CoeffType</td><td>Type of the coefficients of the transfer function. </td></tr>
+    <tr><td class="paramname">CoeffType</td><td>Type of the coefficients of the transfer function.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Add a method to find initial conditions. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6c6f55f11621a7d868ce726e5a06b8e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c6f55f11621a7d868ce726e5a06b8e7">&#9670;&nbsp;</a></span>Filter()</h2>
@@ -329,7 +333,7 @@ template&lt;class DataType , class CoeffType &gt; </div>
 </div><div class="memdoc">
 
 <p><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> a whole sequence. </p>
-<p>Internal buffers will not be updated, meaning that the conditions </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Internal buffers will not be updated, meaning that the initial conditions of the filter will not change after calling this method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>input signal to be filtered. It should be sorted in time-ascending order, <em>i.e.</em>, so that <code>x[k]</code> corresponds to the discrete-time sample \( x_k \). </td></tr>
     <tr><td class="paramname">x0</td><td>initial input conditions. It should contain "past" input samples sorted in time-ascending order, <em>i.e.</em>, \( \cdots, x_{k-3}, x_{k-2}, x_{k-1} \) </td></tr>
@@ -338,6 +342,36 @@ template&lt;class DataType , class CoeffType &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>sequence of filtered outputs \( y_0, y_1, y_2, \cdots \) </dd></dl>
+
+</div>
+</div>
+<a id="a0418bba7c4f3dd124224cb5300c1f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0418bba7c4f3dd124224cb5300c1f12f">&#9670;&nbsp;</a></span>filter2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DataType , class CoeffType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; DataType &gt; <a class="el" href="classdigital__filters_1_1Filter.html">digital_filters::Filter</a>&lt; DataType, CoeffType &gt;::filter2 </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; DataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bi-directional filtering of a whole sequence. </p>
+<p><a class="el" href="classdigital__filters_1_1Filter.html" title="Simple class that represents a digital filter.">Filter</a> a given signal from both sides by applying the filter once and then a second time on the reversed result. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>input signal to be filtered. It should be sorted in time-ascending order, <em>i.e.</em>, so that <code>x[k]</code> corresponds to the discrete-time sample \( x_k \). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sequence of filtered outputs \( y_0, y_1, y_2, \cdots \) </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>for the moment, the initial conditions are obtained by holding the signal on the left and on the right. </dd></dl>
 
 </div>
 </div>
